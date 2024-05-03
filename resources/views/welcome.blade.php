@@ -26,10 +26,10 @@
                 <div class="mb-6">
                     <form class="flex flex-col space-y-4" method="POST" action="/">
                         @csrf
-                        
+
                         <input type="text" name="title" placeholder="Title" class="py-3 px-4 bg-green-100 rounded-xl"> 
 
-                        <textarea name="descriprion" placeholder="Description" class="py-3 px-4 bg-green-100 rounded-xl"></textarea>
+                        <textarea name="description" placeholder="Description" class="py-3 px-4 bg-green-100 rounded-xl"></textarea>
 
                         <button class="w-40 py-4 px-8 bg-blue-400 text-white rounded-xl" >Add ToDo</button>
                     </form>
