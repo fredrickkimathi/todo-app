@@ -8,7 +8,11 @@ use Illuminate\Http\Request;
 class TodoController extends Controller
 {
     public function index(){
-        return view('welcome');
+
+        $todos = Todo::all();
+        return view('welcome', [
+            'todos' => $todos
+        ]);
     }
     public function store(){
 
@@ -24,5 +28,16 @@ class TodoController extends Controller
         return redirect('/')->with('success','');
 
 
+    }
+    public function update( Todo $todo){
+        $todo->update(['isDone'=>true]);
+
+        return redirect('/')->with('success','');
+    }
+
+    public function destroy(Todo $todo){
+        $todo->delete();
+
+        return redirect('/')->with('success','');
     }
 }
